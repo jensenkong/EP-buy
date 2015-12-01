@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css"></head>
+<link rel="stylesheet"  href="CSS/main.css">
+<script src="js/data.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       readData(testDate);
+       $("#itemShowUl li img").click(function(){
+           $(this).addClass("ratejk");
+           $('#itemShowUl').addClass('scaleMin');
+           $('.pictureBigShow').css('left','-400px');
+           $('.pictureBigShow').css('opacity',1);
+       });
+    });
+</script>
+</head>
+<body style="background-color:#f8c013">
+<div id="navbar">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" >
+                    <img alt="Brand" src="images/logo.jpg">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="ep-new-pinpai" style="margin-left:120px">
+                <ul class="nav navbar-nav">
+                    <li ><a href="#">衣品天成旗舰店 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">衣品天成女装旗舰店</a></li>
+                    <li><a href="#">衣品天成童装旗舰店</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">独立品牌 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li  class="dropdown-header">男装</li>
+                            <li><a href="#">奢步士旗舰店</a></li>
+                            <li><a href="#">KOJO旗舰店</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li  class="dropdown-header">女装</li>
+                            <li><a href="#">米兰达旗舰店</a></li>
+                            <li><a href="#">对白旗舰店</a></li>
+                            <li><a href="#">盛放旗舰店</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="navbar-text navbar-right"> <a href="#" class="navbar-link"> <span class="glyphicon glyphicon-user" style="color:#ffffff">    </span>  Hi',亲</a></p>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">品牌介绍 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">品牌故事</a></li>
+                            <li><a href="#">走秀会场</a></li>
+                            <li><a href="#">大战双十一</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+
+        </div>
+    </nav>
+</div>
+
+
+
+<div id="bd" >
+    <div class="container">
+     <ul id="itemShowUl" ></ul>
+     <div class="pictureBigShow">
+         <img src="https://img.alicdn.com/bao/uploaded/i2/TB1jY2NIpXXXXXQXXXXXXXXXXXX_!!0-item_pic.jpg" width="400" />
+
+         111111
+
+     </div>
+    </div>
+</div>
+
+
+</body>
+</html>
