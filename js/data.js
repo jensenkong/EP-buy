@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+var itemId="";
+
 var testDate = new Array(
                           {"item":"5mm055","price":"189.00","image":"https://img.alicdn.com/bao/uploaded/i2/TB1pjPtIpXXXXcwXFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg","priceOrg":"350.00"},
                           {"item":"5mm056","price":"189.00","image":"https://img.alicdn.com/bao/uploaded/i2/TB1pjPtIpXXXXcwXFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg","priceOrg":"350.00"},
@@ -20,6 +22,9 @@ var testDate = new Array(
 );
 
 
+
+
+
 function readData(val) {
     var parentNode = document.getElementById("itemShowUl");
 
@@ -33,6 +38,8 @@ function readData(val) {
   var img = document.createElement("img");
         img.setAttribute("src",val[i].image);
         img.setAttribute("id",val[i].item);
+        img.setAttribute("data-toggle",'modal');
+        img.setAttribute("data-target",'#itemDetail');
         li.appendChild(img);
         parentNode.appendChild(li);
     }
@@ -40,4 +47,21 @@ function readData(val) {
 
 function readJosn(val) {
     var kk =eval()
+}
+
+
+function putItemId(val){
+   if(itemId!=""){
+       itemId="";
+   }else{
+       itemId=val;
+   }
+}
+
+function getItemInfo(val){
+    for(var i=0;i<testDate.length;i++){
+        if(testDate[i].item==val){
+            document.getElementById('detailImage').src=testDate[i].image;
+        }
+    }
 }

@@ -3,20 +3,45 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="CSS/bootstrap.min.css"></head>
-<link rel="stylesheet"  href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css"></head>-->
+
+
+
+    <link rel="stylesheet"  href="CSS/main.css">
 <script src="js/data.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
        readData(testDate);
        $("#itemShowUl li img").click(function(){
-           $(this).addClass("ratejk");
+           // $(this).addClass("ratejk"); 设置图片动画
            $('#itemShowUl').addClass('scaleMin');
-           $('.pictureBigShow').css('left','-400px');
-           $('.pictureBigShow').css('opacity',1);
+           putItemId(this.id);
+           getItemInfo(itemId);
+          // $('.pictureBigShow').css('left','-400px');
+           //$('.pictureBigShow').css('opacity',1);
        });
+
+        $('#itemDetail').on('hidden.bs.modal', function (e) {
+            var invoker = $(e.relatedTarget);
+            $('#itemShowUl').removeClass('scaleMin');
+        })
+
+        $('#itemDetail').on('show.bs.modal', function (e) {
+
+        })
     });
 </script>
 </head>
@@ -74,11 +99,31 @@
      <ul id="itemShowUl" ></ul>
      <div class="pictureBigShow">
          <img src="https://img.alicdn.com/bao/uploaded/i2/TB1jY2NIpXXXXXQXXXXXXXXXXXX_!!0-item_pic.jpg" width="400" />
-
-         111111
-
      </div>
     </div>
+</div>
+
+
+<div class="modal fade" id="itemDetail" role="dialog" aria-labelledby="itemDetailLedby">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">产品信息</h4>
+</div>
+<div class="modal-body">
+   <div class="container-fluid">
+       <div class="row">
+          <div class="col-md-6" style="overflow: hidden">
+              <img src="" id="detailImage" />
+          </div>
+           <div class="col-md-6"></div>
+       </div>
+   </div>
+</div>
+</div>
+</div>
+
 </div>
 
 

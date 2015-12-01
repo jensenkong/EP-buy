@@ -154,9 +154,9 @@ img.ratejk{
 }
 
 
-#itemShowUl{ width: 100%; list-style: none;-moz-transition: all 3s ease ;
-    -webkit-transition: all 3s ease;
-    -o-transition: all 3s ease;}
+#itemShowUl{ width: 100%; list-style: none;-moz-transition: all 1s ease ;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;}
 #itemShowUl li{ margin:10px; float: left; display: block; width: 300px;
     height:300px;}
 #itemShowUl li img{ width:300px; height: 300px;cursor: pointer; transition: opacity 0.5s ease 3s;
@@ -164,7 +164,7 @@ img.ratejk{
     -webkit-transition: opacity 0.5s ease 2.5s ;
     -o-transition: opacity 0.5s ease 2.5s ;}
 
-ul.scaleMin{transform:scale(0.8);
+ul.scaleMin{transform:scale(0.9);
     -webkit-filter: blur(3px); /* Chrome, Opera */
     -moz-filter: blur(3px);
     -ms-filter: blur(3px);
