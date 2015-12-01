@@ -178,3 +178,5 @@ ul.scaleMin{transform:scale(0.9);
     -o-transition: all 1s ease;
     width: 800px; height:700px;position: fixed; margin-left:50%; left: -1400px; top:80px;background-color: #ffffff;opacity: 0
 }
+
+.modal-dialog{ width: 1000px}
