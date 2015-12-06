@@ -41,6 +41,11 @@ function readData(val) {
         img.setAttribute("data-toggle",'modal');
         img.setAttribute("data-target",'#itemDetail');
         li.appendChild(img);
+        /*弹出logo*/
+        var ig = document.createElement("i") ;
+        ig.setAttribute("id",val[i].item+"i");
+        ig.className="i_hover";
+        li.appendChild(ig);
         parentNode.appendChild(li);
     }
 }

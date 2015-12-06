@@ -41,9 +41,13 @@
             $('#itemShowUl').removeClass('scaleMin');
         })
 
-        $('#itemDetail').on('show.bs.modal', function (e) {
+        $("#itemShowUl li img").hover(function(){
+            $(this).addClass("filterblur");
+        },function(){
+            $(this).removeClass("filterblur");
+        });
 
-        })
+
     });
 </script>
 </head>
@@ -58,7 +62,7 @@
             </div>
             <div class="collapse navbar-collapse" id="ep-new-pinpai" style="margin-left:120px">
                 <ul class="nav navbar-nav">
-                    <li ><a href="#">衣品天成旗舰店 <span class="sr-only">(current)</span></a></li>
+                    <li ><a href="/itemPage.html" target="_blank">衣品天成旗舰店 <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">衣品天成女装旗舰店</a></li>
                     <li><a href="#">衣品天成童装旗舰店</a></li>
                     <li class="dropdown">
